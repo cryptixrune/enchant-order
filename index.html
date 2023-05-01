@@ -1,0 +1,86 @@
+<html>
+  <head>
+    <title>Minecraft Enchantment Ordering Tool</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+      integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/data.js?2"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="inner">
+      <h1>Minecraft <span>Enchantment Ordering Tool</span></h1>
+
+      <p>
+        When enchanting items in Minecraft, the order in which you combine
+        armor, weapons and tools with books in your anvil makes a huge
+        difference. Each time you work on an anvil, you increase the
+        <a href="https://minecraft.fandom.com/wiki/Anvil_mechanics"
+          >work penalty</a
+        >
+        for future workings. Once that penalty gets too high, you simply can't
+        add any more enchantments and the anvil says "Too Expensive!". This tool
+        helps you plan the optimal order of combining and applying books, to
+        give you the cheapest possible cost.
+      </p>
+
+      <div id="left">
+        <p>
+          <select id="item">
+            <option value="">Choose an item to enchant</option>
+          </select>
+        </p>
+
+        <div id="enchants" style="display: none">
+          <table></table>
+
+          <div id="overrides" style="display: none">
+            <p></p>
+          </div>
+
+          <p>
+            <button id="calculate">Calculate &raquo;</button>
+          </p>
+        </div>
+      </div>
+
+      <div id="right">
+        <div id="progress" style="display: none">
+          <img src="spin.svg" width="20" height="20" />
+          <span class="lbl">Text here</span>
+        </div>
+
+        <div id="solution" style="display: none">
+          <h2>Optimal solution found!</h2>
+
+          <p id="timings">
+            Completed in under a second, trying 1,000,000,000 combinations
+          </p>
+          <p><b>Total cost:</b> <span id="level-cost">69</span> levels</p>
+
+          <h3>Steps</h3>
+          <ol id="steps"></ol>
+        </div>
+
+        <div id="error" style="display: none">
+          <span class="lbl">Text here</span>
+        </div>
+      </div>
+
+      <br clear="all" />
+    </div>
+
+    <div class="footer">
+      <p>
+        Built by Cal Henderson.
+        <a href="https://github.com/iamcal/enchant-order">Source on Github</a> | Styled by <a href="https://github.com/lunartaku">LunarTaku</a>
+      </p>
+    </div>
+
+	<script src="./js/script.js"></script>
+  </body>
+</html>
